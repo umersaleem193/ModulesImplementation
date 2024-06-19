@@ -1,0 +1,34 @@
+﻿@model IEnumerable<ModulesImplementation.Models.Reminder>
+
+@{
+    ViewData["Title"] = "Reminders";
+}
+
+<h2>Reminders</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New Reminder</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayNameFor(model => model.Title)</th>
+            <th>@Html.DisplayNameFor(model => model.ReminderDateTime)</th>
+            <th>@Html.DisplayNameFor(model => model.Email)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                <td>@Html.DisplayFor(modelItem => item.ReminderDateTime)</td>
+                <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                <td>
+                    <!-- Add Edit and Delete actions if needed -->
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

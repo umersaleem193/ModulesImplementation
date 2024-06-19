@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ModulesImplementation.Models.DepartmentHierarchyViewModel>
+
+<h2>Department Hierarchy</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>Hierarchy</th>
+            <th>Department Name</th>
+            <th>Sub-Department Name</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepartmentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SubDepartmentName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div class="d-flex">
+
+<a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>
