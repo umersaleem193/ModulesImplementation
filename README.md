@@ -1,10 +1,10 @@
 # ModulesImplementation
-#Overview:
+# Overview:
 Setup environment involving installing VStudio, .Net 8.0 SDK, SQL Management Studio etc. 
 Department modules for which buttons are placed and they can be navigated from there. 
 Email module can be accessed by 'Reminder/Create' endpoint.
 
-#Details:
+# Details:
 Department Module:
 There is a Department that can be created and it will have a name and logo. Once created, it will be saved in DB.
 There is a sub department which will be linked to the department as its child and it will also have a name and a logo.
